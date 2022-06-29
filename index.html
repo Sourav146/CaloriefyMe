@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>LearnAR</title>
+	<title>CaloriefyMe</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
@@ -63,8 +63,8 @@
 				<ul class="main-nav nav navbar-nav navbar-right">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
-					<li><a href="#portfolio">Categories</a></li>
-					
+					<li><a href="#contact">Contact Us</a></li>
+
 				</ul>
 				<!-- /Main navigation -->
 
@@ -80,12 +80,13 @@
 					<!-- home content -->
 					<div class="col-md-10 col-md-offset-1">
 						<div class="home-content">
-							<h1 class="white-text">Real Time Learning!</h1>
-							<p class="white-text">Welcome to learnAR!
-								For a real life Learning Experience!
+							<h1 class="white-text">Get your Nutrient Information!</h1>
+							<p class="white-text">
 							</p>
-							<button class="white-btn"><a href="#portfolio">Let's Begin!</a></button>
-							
+							<input type="text" id="search-input" placeholder="What did you eat?">
+							<!-- <input type="number" id="amount" placeholder="Amount (In Grams)">; -->
+							<button class="search-btn btn" id="search-btn">Find</button>
+
 						</div>
 					</div>
 					<!-- /home content -->
@@ -97,6 +98,29 @@
 
 	</header>
 	<!-- /Header -->
+	<div class="meal-details">
+		<!-- recipe close btn -->
+		<button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+			<i class="fas fa-times"></i>
+		</button>
+
+		<!-- meal content -->
+		<div class="meal-details-content">
+			<!-- <h2 class = "recipe-title">Meals Name Here</h2>
+          <p class = "recipe-category">Category Name</p>
+          <div class = "recipe-instruct">
+            <h3>Instructions:</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
+          </div>
+          <div class = "recipe-meal-img">
+            <img src = "food.jpg" alt = "">
+          </div>
+          <div class = "recipe-link">
+            <a href = "#" target = "_blank">Watch Video</a>
+          </div> -->
+		</div>
+	</div>
 
 	<!-- About -->
 	<div id="about" class="section md-padding">
@@ -109,15 +133,23 @@
 
 				<!-- Section header -->
 				<div class="section-header text-center">
-					<h2 class="title">Welcome to LearnAR</h2>
+					<h2 class="title">Welcome to CaloriefyMe</h2>
+					<h5>All about Nutient contents according to the weight of the food which helps in keeping track of
+						the amount of nutrient intake which can help in many ways!</h5>
+					<h5>Out only goal is to provide with the best information about the food
+						What we eat and how much Nutrient does it have is not only essential for those who go gym but
+						also for Patients and other who want to live a Healthy Life<br>With <B>CALORIEFYME</B> ,it is
+						easier to find out if what we eat is suitable for our diet or not by knowing its content in a
+						single CLICK!</h5>
+					<h3>Interesting Facts!</h3>
 				</div>
 				<!-- /Section header -->
 
 				<!-- about -->
 				<div class="col-md-4">
 					<div class="about">
-						<i class="fa fa-cogs"></i>
-						<h3>For Every Class</h3>
+						<h6><div class="nutname">PROTEIN </div><br>The lifespan of most proteins totals two days or less.<br>There is a protein called Pikachurin which was named after the Pokemon, Pikachu. <br>Men should get about 56 grams of protein per day and that women should get about 46 grams.<br><br>Sources<br><br>Some good sources of protein, for example, a broiled steak, can also contain high levels of fat and sodium. Other sources, such as salmon, are lower in saturated fat and sodium.<br>
+							Beans, chickpeas, lentils, tofu, and low-fat dairy products are also good sources of protein</h6>
 						<p></p>
 					</div>
 				</div>
@@ -126,8 +158,8 @@
 				<!-- about -->
 				<div class="col-md-4">
 					<div class="about">
-						<i class="fa fa-magic"></i>
-						<h3>Awesome Features</h3>
+						<h6><div class="nutname">CARBOHYDRATES </div><br>Simple carbohydrates are natural sugars and can be found in fruits, vegetables and other foods. <br>The primary role for carbohydrates in the human body is to provide energy and support the nervous system. <br>Male Dietary Needs: Between 45% and 65% of daily calories<br>
+							Female Dietary Needs: Between 45% and 65% of daily calories <br><br>Sources<br><br>Unhealthy sources of carbohydrates include processed food, white bread, baked goods and soda beverages.<br>Healthy sources of carbohydrates include vegetables, fruits, beans and whole grains.</h6>
 						<p></p>
 					</div>
 				</div>
@@ -136,8 +168,7 @@
 				<!-- about -->
 				<div class="col-md-4">
 					<div class="about">
-						<i class="fa fa-mobile"></i>
-						<h3>Fully Responsive</h3>
+						<h6><div class="nutname">FATS </div><br>Fat intake should account for 30 percent of our diet. <br>Fats are essential for brain development in children. <br>Not all fats are bad. Fats consist of unsaturated fat and saturated fat or animal fat or vegetable fat.<br><br>Sources<br><br>Saturated fats come from animal fats such as meats. Unsaturated fats are present in vegetable sources.</h6>
 						<p></p>
 					</div>
 				</div>
@@ -152,92 +183,8 @@
 	</div>
 	<!-- /About -->
 
-
-	<!-- Portfolio -->
-	<div id="portfolio" class="section md-padding bg-grey">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Row -->
-			<div class="row">
-
-				<!-- Section header -->
-				<div class="section-header text-center">
-					<h2 class="title">Learn in just One Click!</h2>
-				</div>
-				<!-- /Section header -->
-
-				<!-- Work -->
-				<div class="col-md-4 col-xs-6 work">
-					<img class="img-responsive" src="Assets/img/alphabets.png" alt="">
-					<div class="overlay"></div>
-					<div class="work-content">
-						<span>Learn</span>
-						<h3>Alphabets</h3>
-						<div class="work-link">
-							<a href="alphabets.html" target="_blank">Click here!</a>
-						</div>
-					</div>
-				</div>
-				<!-- /Work -->
-
-				<!-- Work -->
-				<div class="col-md-4 col-xs-6 work">
-					<img class="img-responsive" src="Assets/img/shapes.jpg" alt="">
-					<div class="overlay"></div>
-					<div class="work-content">
-						<span>Learn</span>
-						<h3>Mathematics</h3>
-						<div class="work-link">
-							<a href="shapes.html" target="_blank">Click here!</a>
-						</div>
-					</div>
-				</div>
-				<!-- /Work -->
-
-				<!-- Work -->
-				<div class="col-md-4 col-xs-6 work">
-					<img class="img-responsive" src="Assets/img/molecules.jpg" alt="">
-					<div class="overlay"></div>
-					<div class="work-content">
-						<span>Learn</span>
-						<h3>Chemistry</h3>
-						<div class="work-link">
-							<a href="chemistry.html" target="_blank">Click here!</a>
-						</div>
-					</div>
-				</div>
-				<!-- /Work -->
-
-				<!-- Work -->
-				<!-- <div class="col-md-4 col-xs-6 work">
-					<img class="img-responsive" src="Assets/img/body.jpg" alt="">
-					<div class="overlay"></div>
-					<div class="work-content">
-						<span>Learn</span>
-						<h3>Biology</h3>
-						<div class="work-link">
-							<a href="biology.html" target="_blank">Click here!</a>
-						</div>
-					</div>
-				</div> -->
-				<!-- /Work -->
-
-			</div>
-			<!-- /Row -->
-
-		</div>
-		<!-- /Container -->
-
-	</div>
-
-
-
-	
-
 	<!-- Numbers -->
-	
+
 
 	<!-- Contact -->
 	<div id="contact" class="section md-padding">
@@ -253,35 +200,6 @@
 					<h2 class="title">Get in touch</h2>
 				</div>
 				<!-- /Section-header -->
-
-				<!-- contact -->
-				<div class="col-sm-4">
-					<div class="contact">
-						<i class="fa fa-phone"></i>
-						<h3>Phone</h3>
-						<p>+91-8700243858</p>
-					</div>
-				</div>
-				<!-- /contact -->
-
-				<!-- contact -->
-				<div class="col-sm-4">
-					<div class="contact">
-						<i class="fa fa-envelope"></i>
-						<h3>Email</h3>
-						<p>souravkash2001@gmail.com</p>
-					</div>
-				</div>
-				<!-- /contact -->
-
-				<!-- contact -->
-				<div class="col-sm-4">
-					<div class="contact">
-						<i class="fa fa-map-marker"></i>
-						<h3>Address</h3>
-						<p>Delhi Technological University</p>
-					</div>
-				</div>
 				<!-- /contact -->
 
 				<!-- contact form -->
@@ -304,7 +222,6 @@
 
 	</div>
 	<!-- /Contact -->
-
 
 	<!-- Footer -->
 	<footer id="footer" class="sm-padding bg-dark">
@@ -363,7 +280,7 @@
 	<script type="text/javascript" src="Assets/js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="Assets/js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="Assets/js/main.js"></script>
-
+	<script src="newscript.js"></script>
 </body>
 
 </html>
